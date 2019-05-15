@@ -60,8 +60,12 @@ export class FillFormDirective
 
   /** reset the form */
   @HostListener('reset', ['$event'])
-  private async resetForn(ev) {
-    const data = this.formData$.pipe(take(1)).toPromise();
+  private async resetForn(ev:Event) {
+    // console.log('resetTheThing')
+    // ev.preventDefault();
+    const data = await this.formData$.pipe(take(1)).toPromise();
+    // const data = this.formDataSub.getValue()
+    console.log('current data', data)
     /**
      * the timout is needed to make sure the form is
      * filled after the DOM event cleared it.

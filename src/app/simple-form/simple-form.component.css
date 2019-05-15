@@ -1,0 +1,9 @@
+fieldset {
+  /* background-color: red; */
+  border: 1px solid rgb(213, 189, 253);
+  width: 300px;
+  /* padding-left: +1em; */
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: none;
+}

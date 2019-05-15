@@ -72,7 +72,8 @@ export class ObservableFormDirective implements OnInit, AfterContentInit, AfterV
   /** listen to the reset events on the form, and just make init refire to 'reset' all data */
   @HostListener('reset')
   private onreset() {
-    this.init$.next();
+    console.log('resetting')
+    // this.init$.next();
   }
   @HostListener('submit', ['$event']) private async handleSubmit(ev: MouseEvent) {
     try {
